@@ -13,11 +13,11 @@ AIRTABLE_BASE_KEY=<value>
 NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=<value>
 ```
 
-#### PLEASE NOTE, 
-You need to configure the above API keys by going to: 
-[Foursquare](https://foursquare.com/), 
-[Airtable](https://www.airtable.com/) and 
-[Unsplash](https://unsplash.com/) for their respective keys. 
+## PLEASE NOTE
+You need to configure the above API keys by going to:
+[Foursquare](https://foursquare.com/),
+[Airtable](https://www.airtable.com/) and
+[Unsplash](https://unsplash.com/) for their respective keys.
 
 
 ### To generate API keys for all 3 platforms
