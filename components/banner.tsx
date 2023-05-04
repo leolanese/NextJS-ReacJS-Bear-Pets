@@ -10,9 +10,9 @@ const Banner = (props) => {
       <p className={styles.subTitle}>Discover your local mate produts</p>
       <div className={styles.buttonWrapper}>
 
-      XXX <button className={styles.button} onClick={props.handleOnClick}>
-          {props.buttonText}
-        </button> XXX
+      `` <button className={styles.button} onClick={props.handleOnClick}>
+          {props.buttonText}XXX
+        </button>``
 
       </div>
     </div>

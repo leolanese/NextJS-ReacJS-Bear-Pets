@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
+  const handleOnBannerBtnClick = () => {
+    console.log('handleOnBannerBtnClick');
+  };
+
   return (
     <>
       <main 
