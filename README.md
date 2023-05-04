@@ -24,6 +24,5 @@ You need to configure the above API keys by going to:
 
 You need to sign up, create an account, create a project and generate an API key for each platform. Otherwise, the [course](https://bit.ly/3nRIsbi) walks you through how to create each one of those if you get stuck!
 
-#### If don't have valid API keys i.e. they are empty, or you don't have a .env.local file with the above keys configured or above keys exists but no values are not configured inside that file then you will get the following error:
-<img src="https://res.cloudinary.com/dkfnd7xy7/image/upload/v1659022098/Screen_Shot_2022-07-28_at_11.27.20_AM_l5apuq.png" width="600px" height="300px" />
+> If don't have valid API keys i.e. they are empty, or you don't have a .env.local file with the above keys configured or above keys exists but no values are not configured inside that file then you will get the following error:
 
