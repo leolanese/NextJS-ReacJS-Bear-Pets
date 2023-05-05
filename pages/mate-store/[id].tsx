@@ -16,7 +16,7 @@ const MateStore = () => {
 
                 <div className="bg-blue-500 w-full h-full flex items-center justify-center">
 
-                    <p>Mate store here</p>
+                    <p>Mate-Store Located</p>
 
                     <Link 
                         href={'/'}   
@@ -24,9 +24,9 @@ const MateStore = () => {
                         prefetch  
                         passHref      
                         >
-                    <button className="text-blue-600 hover:text-blue-800 transition duration-200">
-                        Back Home
-                    </button>
+                        <button className="text-blue-600 hover:text-blue-800 transition duration-200">
+                            Back Home
+                        </button>
                     </Link>
 
                 </div>
