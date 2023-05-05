@@ -27,3 +27,12 @@ You need to sign up, create an account, create a project and generate an API key
 > If don't have valid API keys i.e. they are empty, or you don't have a .env.local file with the above keys configured or above keys exists but no values are not configured inside that file then you will get the following error:
 
 ---
+### :100: <i>Thanks!</i>
+#### Now, don't be an stranger. Let's stay in touch!
+
+##### :radio_button: linkedin: <a href="https://www.linkedin.com/in/leolanese/" target="_blank">@LeoLanese</a>
+##### :radio_button: Twitter: <a href="https://twitter.com/LeoLanese" target="_blank">@LeoLanese</a>
+##### :radio_button: Portfolio: <a href="https://www.leolanese.com" target="_blank">www.leolanese.com</a>
+##### :radio_button: DEV.to: <a href="https://www.dev.to/leolanese" target="_blank">dev.to/leolanese</a>
+##### :radio_button: Blog: <a href="https://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
+##### :radio_button: Questions / Suggestion / Recommendation: developer@leolanese.com
