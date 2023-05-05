@@ -12,7 +12,7 @@ const roboto = Roboto({ weight: '100', subsets: ['latin'] })
 
 export default function Home() {
   const handleOnBannerBtnClick = () => {
-    console.log('handleOnBannerBtnClick on: `index.tsx`')
+    console.log('handleOnBannerBtnClick: `index.tsx`')
   };
 
   return (
