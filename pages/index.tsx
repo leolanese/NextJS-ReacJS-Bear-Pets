@@ -39,6 +39,7 @@ export default function Home() {
             width={90}
             height={18}
             priority
+            loading='lazy'
           />
 
           <Image
@@ -48,6 +49,7 @@ export default function Home() {
             width={90}
             height={18}
             priority
+            loading='lazy'
           />
 
       </footer>
