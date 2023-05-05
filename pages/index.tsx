@@ -1,21 +1,18 @@
 // default route
 import Image from 'next/image'
 
-import { Inter } from 'next/font/google'
-import { Roboto } from 'next/font/google';
+// https://fonts.google.com/
+import { Inter, Roboto } from 'next/font/google'
 
 import Head from "next/head";
 import Banner from "../components/banner";
 
-const inter = Inter({ subsets: ['latin'] })
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-});
+const inter = Inter({ weight: '500', subsets: ['latin'] })
+const roboto = Roboto({ weight: '100', subsets: ['latin'] })
 
 export default function Home() {
   const handleOnBannerBtnClick = () => {
-    console.log('handleOnBannerBtnClick on: `index.tsx`');
+    console.log('handleOnBannerBtnClick on: `index.tsx`')
   };
 
   return (
@@ -29,20 +26,30 @@ export default function Home() {
 
       <div 
         className={`flex min-h-screen flex-col items-center justify-between p-24`} >
-        <Banner buttonText="ClickMe" handleOnClick={handleOnBannerBtnClick} />
+          <Banner buttonText="ClickMe" handleOnClick={handleOnBannerBtnClick} />
       </div>
 
       <footer 
-      className={`flex items-center h-full`}>
-        <p className={`pr-15 ${roboto.className}`}>Powered by:</p>
-        <Image
-          className="pl-15 relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="NextJS Logo"
-          width={90}
-          height={18}
-          priority
-        />
+        className={`flex flex justify-between h-full p-2`}>
+
+          <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+            src="/vercel.svg"
+            alt="Vercel Logo"
+            width={90}
+            height={18}
+            priority
+          />
+
+          <Image
+            className="ml-5 relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+            src="/next.svg"
+            alt="NextJS Logo"
+            width={90}
+            height={18}
+            priority
+          />
+
       </footer>
 
    </main>
