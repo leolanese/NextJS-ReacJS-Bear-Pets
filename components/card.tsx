@@ -5,32 +5,32 @@ import styles from "./card.module.css";
 
 const Card = (props) => {
   return (
-    <Link href={props.href} className={styles.cardLink}>
+    <>
+        <Link href={props.href}>
+    
+          <div className="flex space-x-4">
+            <div className="w-36 h-36 rounded overflow-hidden shadow-lg">
 
-      <div className="max-w-xs rounded overflow-hidden shadow-lg m-4">
+              <Image
+                className={`w-full h-2/3 object-cover`}
+                src={props.imgUrl}
+                width={120}
+                height={80}
+                alt={props.name}
+              />
 
-        <Image
-          className={`w-full h-64 object-cover`}
-          src={props.imgUrl}
-          width={120}
-          height={80}
-          alt={props.name}
-        />
+              <div className="px-2 py-1">
+                <div className="font-bold text-sm mb-1 truncate">{props.title}</div>
+                <p className="text-gray-700 text-xs truncate">{props.email}</p>
+              </div>
 
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">Card Title</div>
-          <p className="text-gray-700 text-base">
-            This is a description of the card content. You can add anything you want here.
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
-        </div>
-      </div>
 
-    </Link>
+            </div>
+          </div>  
+
+        </Link>
+    </>
+  
   );
 };
 
