@@ -6,6 +6,7 @@ import { Inter, Roboto } from 'next/font/google'
 
 import Head from "next/head";
 import Banner from "../components/banner";
+import Card from '@/components/card';
 
 const inter = Inter({ weight: '500', subsets: ['latin'] })
 const roboto = Roboto({ weight: '100', subsets: ['latin'] })
@@ -29,14 +30,20 @@ export default function Home() {
           <Banner buttonText="ClickMe" handleOnClick={handleOnBannerBtnClick} />
       </div>
 
+      <Card 
+        name="caca name" 
+        href={`/mate-store/1`}
+        imgUrl="/next.svg"
+        />
+
+
       <footer 
         className={`flex flex justify-between h-full p-2`}>
-
           <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
             src="/vercel.svg"
             alt="Vercel Logo"
-            width={90}
+            width={20}
             height={18}
             priority
           />
@@ -49,7 +56,6 @@ export default function Home() {
             height={18}
             priority
           />
-
       </footer>
 
    </main>
