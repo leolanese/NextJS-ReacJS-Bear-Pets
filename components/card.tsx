@@ -7,13 +7,13 @@ const Card = (props) => {
   return (
     <Link href={props.href} className={styles.cardLink}>
 
-      <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
+      <div className="max-w-xs rounded overflow-hidden shadow-lg m-4">
 
         <Image
           className={`w-full h-64 object-cover`}
           src={props.imgUrl}
-          width={260}
-          height={160}
+          width={120}
+          height={80}
           alt={props.name}
         />
 
@@ -29,7 +29,7 @@ const Card = (props) => {
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
         </div>
       </div>
-      
+
     </Link>
   );
 };

@@ -43,7 +43,7 @@ export default function Home() {
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
             src="/vercel.svg"
             alt="Vercel Logo"
-            width={20}
+            width={90}
             height={18}
             priority
           />
