@@ -77,7 +77,11 @@ export default function App({ Component, pageProps }: AppProps) {
               alt="Vercel Logo"
               width={90}
               height={18}
-              priority
+              quality={80}
+              loading='lazy'
+              sizes="(min-width: 60em) 24vw,
+                     (min-width: 28em) 45vw,
+                     100vw"
             />
 
             <Image
