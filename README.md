@@ -1,30 +1,59 @@
-# Setup App
+# NextJS React Mate shop
 
-Please go through the below details before you run the app.
+> Mate, is the favourite native drink in south-america. Originally from Argentina, like tango and Messi.
 
-## Environment Variables
-
-For this app to work, you need to configure the following environment variables in your .env.local file so please create a .env.local file in the root of your project right next to readme.md and the file needs to look like this:
+## Setup App
 
 ```js
-NEXT_PUBLIC_FOURSQUARE_API_KEY=<value>
-AIRTABLE_API_KEY=<value>
-AIRTABLE_BASE_KEY=<value>
-NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=<value>
+npm i
 ```
 
-## API Keys
+## Build the App
 
-You need to configure the above API keys by going to:
-[Foursquare](https://foursquare.com/),
-[Airtable](https://www.airtable.com/) and
-[Unsplash](https://unsplash.com/) for their respective keys.
+> This command will build your Next.js app and generate the necessary production files in the /.next directory.
 
-### To generate API keys for all 3 platforms
+```
+npx next build
+```
 
-You need to sign up, create an account, create a project and generate an API key for each platform. Otherwise, the [course](https://bit.ly/3nRIsbi) walks you through how to create each one of those if you get stuck!
+### File structure and `chunks` info 
 
-> If don't have valid API keys i.e. they are empty, or you don't have a .env.local file with the above keys configured or above keys exists but no values are not configured inside that file then you will get the following error:
+```js
+info  - Linting and checking validity of types  
+info  - Creating an optimized production build  
+info  - Compiled successfully
+info  - Collecting page data  
+info  - Generating static pages (4/4)
+info  - Finalizing page optimization  
+
+Route (pages)                              Size     First Load JS
+┌ ○ /                                      915 B          80.2 kB
+├   └ css/c2bf0924d29fba72.css             1.02 kB
+├   /_app                                  0 B            79.3 kB
+├ ○ /404                                   182 B          79.5 kB
+├ λ /api/api                               0 B            79.3 kB
+├ λ /api/hello                             0 B            79.3 kB
+└ ○ /mate-store/[id]                       582 B          79.9 kB
++ First Load JS shared by all              81.8 kB
+  ├ chunks/framework-2c79e2a64abdb08b.js   45.2 kB
+  ├ chunks/main-dda1ec63a16662d1.js        26.8 kB
+  ├ chunks/pages/_app-9904e566966d5c63.js  6.51 kB
+  ├ chunks/webpack-8fa1640cc84ba8fe.js     750 B
+  └ css/40a241717b8c8589.css               2.46 kB
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+```
+
+
+## Start the App
+
+```js 
+npm start
+```
+
+> Please go through the below details before you run the app.
 
 ---
 ### :100: <i>Thanks!</i>
