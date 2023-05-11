@@ -27,7 +27,7 @@ export default function Home() {
         </Head>
 
         <div 
-          className={`flex min-h-screen flex-col items-center justify-between p-24`} >
+          className={`flex min-h-screen flex-col items-center justify-between`} >
             <Banner buttonText="ClickMe" handleOnClick={handleOnBannerBtnClick} />
         </div>
 

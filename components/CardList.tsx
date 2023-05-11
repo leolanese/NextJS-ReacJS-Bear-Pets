@@ -3,21 +3,24 @@ import Card from './../components/Card';
 
 function CardList({users}) {
 
-    const cardComponent = users.map( (user, i) => {
+    const cardComponent = users.map((user, i) => {
+      console.log(user);
       return (
-        <Card key={i} 
-            id={ users[i].id } 
-            name={users[i].name} 
-            email={users[i].email}
-            href="mate-shop/1"
-            imgUrl="./next.svg"
-        />
+        <div className="p-4" key={i}>
+            <Card key={i} 
+                id={ users[i].id } 
+                name={users[i].name} 
+                email={users[i].email}
+                href="mate-shop/1"
+                imgUrl={users[i].img+users[i].id}
+            />
+        </div>
         
       )
     })
 
     return (
-        <div>
+        <div className="flex flex-wrap">
             {cardComponent}
         </div>
     );

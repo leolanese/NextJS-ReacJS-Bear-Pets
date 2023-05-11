@@ -2,8 +2,8 @@ import React, {memo} from 'react';
 
 const Search = ({onSearchChange}) => {
     return (
-        <div className="pa2 ba ">
-            <input className="w-90" type='search 'placeholder='Search ...' onChange={onSearchChange} />
+        <div  className={`flex flex justify-between h-full p-2`}>
+            <input className="" type='search 'placeholder='Search ...' onChange={onSearchChange} />
         </div>
     );
 }

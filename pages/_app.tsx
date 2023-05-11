@@ -63,11 +63,12 @@ export default function App({ Component, pageProps }: AppProps) {
       </>
   : (
     <>
-      <Search onSearchChange={onSearchChange} />
+      <Search onSearchChange={onSearchChange} 
+            />
 
       <Component {...pageProps} />
 
-      <CardList users={filteredUsers}/>
+      <CardList users={filteredUsers} />
 
       <footer 
           className={`flex flex justify-between h-full p-2`}>
