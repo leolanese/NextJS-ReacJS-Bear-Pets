@@ -16,7 +16,7 @@ const MateStore = () => {
 
                 <div className="bg-blue-500 w-full h-full flex items-center justify-center">
 
-                    <p>Mate-Store Located</p>
+                    <p>Mate-Shop Located</p>
 
                     <Link 
                         href={'/'}   
