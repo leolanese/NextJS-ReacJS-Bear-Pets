@@ -4,9 +4,12 @@ import Image from "next/image";
 import styles from "./Card.module.css";
 
 const Card = (props) => {
+  console.log('props', props)
+  const { id, name, href, imgUrl } = props;
+
   return (
     <>
-        <Link href={props.href}>
+        <Link href={{ pathname: '/bear-pets/[id]', query: { id, name, href, imgUrl } }}>
     
           <div className="flex space-x-4">
             <div className="w-36 h-36 rounded overflow-hidden shadow-lg">

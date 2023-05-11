@@ -10,7 +10,7 @@ function CardList({users}) {
             <Card key={i} 
                 id={ users[i].id } 
                 name={users[i].name} 
-                href={`bear-pets/${users[i].id}`}
+                href={`bear-pets/`}
                 imgUrl={users[i].img+users[i].id}
             />
         </div>
