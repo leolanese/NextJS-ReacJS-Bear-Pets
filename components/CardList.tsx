@@ -10,7 +10,6 @@ function CardList({users}) {
             <Card key={i} 
                 id={ users[i].id } 
                 name={users[i].name} 
-                email={users[i].email}
                 href={`bear-pets/${users[i].id}`}
                 imgUrl={users[i].img+users[i].id}
             />

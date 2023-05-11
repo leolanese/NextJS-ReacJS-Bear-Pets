@@ -21,7 +21,6 @@ const Card = (props) => {
 
               <div className="px-2 py-1">
                 <div className="font-bold text-sm mb-1 truncate">Name: {props.name}</div>
-                <p className="text-gray-700 text-xs truncate">email: {props.email}</p>
                 <p className="text-gray-700 text-xs truncate">id: {props.id}</p>
               </div>
 
