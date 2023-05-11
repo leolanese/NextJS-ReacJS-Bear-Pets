@@ -43,17 +43,13 @@ Route (pages)                              Size     First Load JS
 
 λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
 ○  (Static)  automatically rendered as static HTML (uses no initial props)
-
 ```
-
 
 ## Start the App
 
 ```js 
 npm start
 ```
-
-> Please go through the below details before you run the app.
 
 ---
 ### :100: <i>Thanks!</i>
