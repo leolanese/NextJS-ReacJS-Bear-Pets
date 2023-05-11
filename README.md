@@ -8,7 +8,24 @@
 npm i
 ```
 
-## Build the App
+## Run Development App
+
+> By running npm run dev, we'll switch back to the development environment and have access to the development server's features.
+
+```js
+npm run dev
+```
+
+```js
+> nextjs-reactjs-shop@0.1.0 dev
+> next dev
+
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+```
+
+---
+
+## Build Production App (./next)
 
 > This command will build your Next.js app and generate the necessary production files in the /.next directory.
 
@@ -45,10 +62,17 @@ Route (pages)                              Size     First Load JS
 ○  (Static)  automatically rendered as static HTML (uses no initial props)
 ```
 
-## Start the App
+## Start Production Server App (read from /.next)
 
 ```js 
 npm start
+```
+
+```js
+> nextjs-reactjs-shop@0.1.0 start
+> next start
+
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 ```
 
 ---

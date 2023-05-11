@@ -62,7 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <h1>Loading... Please, wait.</h1>
       </>
   : (
-    <>
+    <div className={`bg-sky-500/75`}>
       <Search onSearchChange={onSearchChange} 
             />
 
@@ -94,7 +94,7 @@ export default function App({ Component, pageProps }: AppProps) {
               priority
             />
         </footer>
-    </>
+    </div>
   );
 }
 

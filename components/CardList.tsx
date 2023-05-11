@@ -6,7 +6,7 @@ function CardList({users}) {
     const cardComponent = users.map((user, i) => {
       console.log(user);
       return (
-        <div className="p-4" key={i}>
+        <div className={`m-4 bg-blue-500 border border-black`} key={i}>
             <Card key={i} 
                 id={ users[i].id } 
                 name={users[i].name} 
