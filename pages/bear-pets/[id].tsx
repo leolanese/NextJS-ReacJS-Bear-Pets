@@ -19,7 +19,7 @@ const BearPets = () => {
                     <Image
                         className="relative"
                         src={imageSource}
-                        alt="Vercel Logo"
+                        alt="Bear Pets image"
                         width={90}
                         height={18}
                         quality={80}

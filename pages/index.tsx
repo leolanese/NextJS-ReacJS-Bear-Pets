@@ -20,7 +20,7 @@ export default function Home() {
       <main className={`inter.className`} >
 
         <Head>
-          <title>The Mate Shop</title>
+          <title>The Bear Pets</title>
           <link rel="icon" href="/favicon.ico"></link>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
