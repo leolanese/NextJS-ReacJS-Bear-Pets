@@ -6,7 +6,16 @@ import Image from 'next/image'
 const BearPets = () => {
     const router = useRouter()
     const { id, ...otherParams } = router.query;
-    const imageSource =  otherParams.imgUrl;
+
+    let imageSource = null;
+    if (Array.isArray(id)) {
+        // Handle the case when id is an array
+        imageSource = otherParams.imgUrl?.toString() || null;
+      } else {
+        // Handle the case when id is a string
+        imageSource = otherParams.imgUrl?.toString() || null;
+      }
+
     return (
         <>
             <Head>
