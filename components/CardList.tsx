@@ -11,7 +11,7 @@ function CardList({users}) {
                 id={ users[i].id } 
                 name={users[i].name} 
                 email={users[i].email}
-                href={`mate-shop/${users[i].id}`}
+                href={`bear-pets/${users[i].id}`}
                 imgUrl={users[i].img+users[i].id}
             />
         </div>

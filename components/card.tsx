@@ -14,16 +14,16 @@ const Card = (props) => {
               <Image
                 className={`w-full h-2/3 object-cover`}
                 src={props.imgUrl}
-                width={120}
-                height={80}
+                width={220}
+                height={180}
                 alt={props.name}
               />
 
               <div className="px-2 py-1">
-                <div className="font-bold text-sm mb-1 truncate">{props.title}</div>
-                <p className="text-gray-700 text-xs truncate">{props.email}</p>
+                <div className="font-bold text-sm mb-1 truncate">Name: {props.name}</div>
+                <p className="text-gray-700 text-xs truncate">email: {props.email}</p>
+                <p className="text-gray-700 text-xs truncate">id: {props.id}</p>
               </div>
-
 
             </div>
           </div>  

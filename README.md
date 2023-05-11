@@ -1,6 +1,4 @@
-# NextJS React Mate shop
-
-> Mate, is the favourite native drink in south-america. Originally from Argentina, like tango and Messi.
+# NextJS React Bear Pets
 
 ## Setup App
 
@@ -50,7 +48,7 @@ Route (pages)                              Size     First Load JS
 ├ ○ /404                                   182 B          79.5 kB
 ├ λ /api/api                               0 B            79.3 kB
 ├ λ /api/hello                             0 B            79.3 kB
-└ ○ /mate-store/[id]                       582 B          79.9 kB
+└ ○ /bear-pet/[id]                       582 B          79.9 kB
 + First Load JS shared by all              81.8 kB
   ├ chunks/framework-2c79e2a64abdb08b.js   45.2 kB
   ├ chunks/main-dda1ec63a16662d1.js        26.8 kB
