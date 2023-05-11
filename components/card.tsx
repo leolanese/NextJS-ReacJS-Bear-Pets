@@ -24,7 +24,6 @@ const Card = (props) => {
                 <p className="text-gray-700 text-xs truncate">{props.email}</p>
               </div>
 
-
             </div>
           </div>  
 
