@@ -17,10 +17,14 @@ export default function Home() {
 
   return (
     <>
+<<<<<<< HEAD
       <main className={` inter.className pt-8`}>
+=======
+      <main className={`inter.className`} >
+>>>>>>> 0529e6f9a9d002be2558b5bcefd7144eb2c37dd7
 
         <Head>
-          <title>The Mate Shop</title>
+          <title>The Bear Pets</title>
           <link rel="icon" href="/favicon.ico"></link>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo } from 'react'
-
+import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app'
 import UseErrorBoundary from './../components/UseErrorBoundary';
 import CardList from '@/components/CardList';
@@ -14,6 +14,9 @@ export default function App({ Component, pageProps }: AppProps) {
     users: [], // mockResults
     searchField: '',
   })
+
+  const router = useRouter();
+  const hideFooter = router.pathname === '/bear-pets/[id]';
 
   const setUsers = (users) => {
     setAppState((prevState) => ({ ...prevState, users: users }));
@@ -30,7 +33,6 @@ export default function App({ Component, pageProps }: AppProps) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const users = await response.json();
-        console.table(users)
         setUsers(users);
       } catch (error) {
         if (error.name === 'AbortError') {
@@ -53,21 +55,36 @@ export default function App({ Component, pageProps }: AppProps) {
     setAppState(prevState => ({ ...prevState, searchField: event.target.value }));
   };
 
-    const filteredUsers = appState.users.filter((user) =>
-      user.name.toLowerCase().includes(appState.searchField.toLowerCase())
-    );
+  const filteredUsers = appState.users.filter((user) =>
+    user.name.toLowerCase().includes(appState.searchField.toLowerCase())
+  );
+
+  console.table('filteredUsers', filteredUsers)
   
   return !appState.users.length ?
       <>
         <h1>Loading... Please, wait.</h1>
       </>
   : (
+<<<<<<< HEAD
     <>
       <Component {...pageProps} />
 
       <Search onSearchChange={onSearchChange}  />
 
       <CardList users={filteredUsers} />
+=======
+    <div className={`bg-sky-500/75`}>
+      {!hideFooter && (
+        <Search onSearchChange={onSearchChange} />
+      )}
+
+      <Component {...pageProps} />
+
+      {!hideFooter && (
+       <CardList users={filteredUsers} />
+      )}
+>>>>>>> 0529e6f9a9d002be2558b5bcefd7144eb2c37dd7
 
       <footer 
           className={`flex flex justify-between h-full p-2`}>
@@ -93,7 +110,7 @@ export default function App({ Component, pageProps }: AppProps) {
               priority
             />
         </footer>
-    </>
+    </div>
   );
 }
 
