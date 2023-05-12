@@ -59,5 +59,4 @@ export const users = [
       username: 'Lili',
       img: 'https://placebear.com/250/15'
     },
-
   ];
