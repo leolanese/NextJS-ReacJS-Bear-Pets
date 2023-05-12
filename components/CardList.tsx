@@ -14,7 +14,6 @@ function CardList({users}) {
                 imgUrl={users[i].img+users[i].id}
             />
         </div>
-        
       )
     })
 

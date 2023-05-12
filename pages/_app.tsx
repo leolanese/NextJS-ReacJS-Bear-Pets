@@ -67,22 +67,17 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
   : (
     <>
-      <Component {...pageProps} />
-
-      <Search onSearchChange={onSearchChange}  />
-
-      <CardList users={filteredUsers} />
 
       <div className={`bg-sky-500/75`}>
+
+        <Component {...pageProps} />
 
         {!hideFooter && (
           <Search onSearchChange={onSearchChange} />
         )}
 
-        <Component {...pageProps} />
-
         {!hideFooter && (
-        <CardList users={filteredUsers} />
+           <CardList users={filteredUsers} />
         )}
 
         <footer 
