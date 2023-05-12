@@ -6,7 +6,6 @@ import { Inter, Roboto } from 'next/font/google'
 import Head from "next/head";
 import Banner from "../components/banner";
 
-
 const inter = Inter({ weight: '500', subsets: ['latin'] })
 const roboto = Roboto({ weight: '100', subsets: ['latin'] })
 
@@ -18,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <main className={inter.className}>
+      <main className={` inter.className pt-8`}>
 
         <Head>
           <title>The Mate Shop</title>
@@ -27,7 +26,7 @@ export default function Home() {
         </Head>
 
         <div 
-          className={`flex min-h-screen flex-col items-center justify-between`} >
+          className={`flex flex-col items-center justify-between`} >
             <Banner buttonText="ClickMe" handleOnClick={handleOnBannerBtnClick} />
         </div>
 

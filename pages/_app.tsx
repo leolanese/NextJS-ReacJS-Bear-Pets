@@ -63,10 +63,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </>
   : (
     <>
-      <Search onSearchChange={onSearchChange} 
-            />
-
       <Component {...pageProps} />
+
+      <Search onSearchChange={onSearchChange}  />
 
       <CardList users={filteredUsers} />
 
