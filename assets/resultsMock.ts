@@ -34,5 +34,30 @@ export const users = [
       name: 'Carley Abrahams',
       username: 'Carley',
       img: 'https://placebear.com/250/15'
-    }
+    },
+    {
+      id: 7,
+      name: 'Gustavo Lanese',
+      username: 'Miguel',
+      img: 'https://placebear.com/250/15'
+    },
+    {
+      id: 8,
+      name: 'Lorena Lanese',
+      username: 'Lore',
+      img: 'https://placebear.com/250/15'
+    },
+    {
+      id: 9,
+      name: 'Nora Lanese',
+      username: 'Nori',
+      img: 'https://placebear.com/250/15'
+    },
+    {
+      id: 10,
+      name: 'Liliana Lanese',
+      username: 'Lili',
+      img: 'https://placebear.com/250/15'
+    },
+
   ];
