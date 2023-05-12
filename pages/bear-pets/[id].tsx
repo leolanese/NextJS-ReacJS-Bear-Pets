@@ -11,10 +11,10 @@ const BearPets = () => {
     if (Array.isArray(id)) {
         // Handle the case when id is an array
         imageSource = otherParams.imgUrl?.toString() || null;
-      } else {
+    } else {
         // Handle the case when id is a string
         imageSource = otherParams.imgUrl?.toString() || null;
-      }
+    }
 
     return (
         <>
