@@ -4,7 +4,6 @@ import Image from "next/image";
 import styles from "./Card.module.css";
 
 const Card = (props) => {
-  console.log('props', props)
   const { id, name, href, imgUrl } = props;
 
   return (

@@ -23,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
     // (prevState => ({ ...prevState, users: users })). This ensures that you're always 
     // using the most recent state when setting the new state
   };
+  
 
   useEffect(() => {
     const fetchUsers = async (signal) => {
