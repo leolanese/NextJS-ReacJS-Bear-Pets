@@ -9,7 +9,7 @@ const Card = (props) => {
 
   return (
     <>
-        <Link href={{ pathname: '/bear-pets/[id]', query: { id, name, href, imgUrl } }}>
+        <Link href={{ pathname: `${props.href}/${id}`, query: { id, name, href, imgUrl } }}>
     
           <div className="flex space-x-4">
             <div className="w-36 h-36 rounded overflow-hidden shadow-lg">

@@ -7,12 +7,14 @@ function CardList({users}) {
       console.log(user);
       return (
         <div className={`m-4 b-1`} key={i}>
+
             <Card key={i} 
                 id={ users[i].id } 
                 name={users[i].name} 
                 href={`bear-pets/`}
                 imgUrl={users[i].img+users[i].id}
             />
+            
         </div>
       )
     })
