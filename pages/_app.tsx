@@ -24,7 +24,6 @@ export default function App({ Component, pageProps }: AppProps) {
     // using the most recent state when setting the new state
   };
   
-
   useEffect(() => {
     const fetchUsers = async (signal) => {
       try {
