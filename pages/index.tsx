@@ -9,7 +9,20 @@ import Banner from "../components/banner";
 const inter = Inter({ weight: '500', subsets: ['latin'] })
 const roboto = Roboto({ weight: '100', subsets: ['latin'] })
 
-export default function Home() {
+import { pets } from '../assets/resultsMock';
+
+// server-side function getStaticProps fetches data from the API URL and returns an object
+export const getStaticProps = async (context) => {
+ 
+  return { 
+      props:  {
+        pets
+      }
+  };
+}
+
+export default function Home(props) {
+  console.log('props',  props)
 
   const handleOnBannerBtnClick = () => {
     console.log('handleOnBannerBtnClick: `index.tsx`')

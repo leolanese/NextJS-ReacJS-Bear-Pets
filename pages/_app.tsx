@@ -11,29 +11,29 @@ import '@/styles/globals.css'
 export default function App({ Component, pageProps }: AppProps) {
   const [error, throwError] = UseErrorBoundary();
   const [appState, setAppState] = useState({
-    users: [], // mockResults
+    pets: [], // resultsMock
     searchField: '',
   })
 
   const router = useRouter();
   const hideFooter = router.pathname === '/bear-pets/[id]';
 
-  const setUsers = (users) => {
-    setAppState((prevState) => ({ ...prevState, users: users }));
-    // (prevState => ({ ...prevState, users: users })). This ensures that you're always 
+  const setPets = (pets) => {
+    setAppState((prevState) => ({ ...prevState, pets: pets }));
+    // (prevState => ({ ...prevState, pets: pets })). This ensures that you're always 
     // using the most recent state when setting the new state
   };
   
   useEffect(() => {
-    const fetchUsers = async (signal) => {
+    const fetchPets = async (signal) => {
       try {
         // The AbortController and its signal offer a way to communicate the abort event to the fetch request
         const response = await fetch('/api/api', { signal });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const users = await response.json();
-        setUsers(users);
+        const pets = await response.json();
+        setPets(pets);
       } catch (error) {
         if (error.name === 'AbortError') {
           console.log('Fetch request was aborted');
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
     };
 
     const abortController = new AbortController();
-    fetchUsers(abortController.signal);
+    fetchPets(abortController.signal);
 
     return () => {
       abortController.abort();
@@ -55,15 +55,15 @@ export default function App({ Component, pageProps }: AppProps) {
     setAppState(prevState => ({ ...prevState, searchField: event.target.value }));
   };
 
-  const filteredUsers = appState.users.filter((user) =>
+  const filteredPets = appState.pets.filter((user) =>
     user.name.toLowerCase().includes(appState.searchField.toLowerCase())
   );
 
-  console.table('filteredUsers', filteredUsers);
+  console.table('filteredPets', filteredPets);
   console.log('process.env.LOCAL', process.env.LOCAL);  // http://localhost
   console.log('process.env.PORT', process.env.PORT);   // 3000
   
-  return !appState.users.length ?
+  return !appState.pets.length ?
       <div>
         <h1>Loading... Please, wait.</h1>
       </div>
@@ -79,7 +79,7 @@ export default function App({ Component, pageProps }: AppProps) {
         )}
 
         {!hideFooter && (
-           <CardList users={filteredUsers} />
+           <CardList pets={filteredPets} />
         )}
 
         <footer 
