@@ -18,6 +18,7 @@ import { pets } from '../assets/resultsMock';
 
 // SSG: function getStaticProps fetches data from the API URL and returns an object
 export const getStaticProps = async (context) => {
+  console.log('getStaticProps server side log:', getStaticProps)
    return { 
       props:  {
         pets
