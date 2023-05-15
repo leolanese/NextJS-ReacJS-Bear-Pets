@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ['placebear.com'],
   },
+  env: {
+    LOCAL: process.env.LOCAL,
+    PORT: process.env.PORT,
+  },
 }
 
 

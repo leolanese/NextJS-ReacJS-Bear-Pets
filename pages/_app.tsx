@@ -59,7 +59,9 @@ export default function App({ Component, pageProps }: AppProps) {
     user.name.toLowerCase().includes(appState.searchField.toLowerCase())
   );
 
-  console.table('filteredUsers', filteredUsers)
+  console.table('filteredUsers', filteredUsers);
+  console.log('process.env.LOCAL', process.env.LOCAL);  // http://localhost
+  console.log('process.env.PORT', process.env.PORT);   // 3000
   
   return !appState.users.length ?
       <div>
