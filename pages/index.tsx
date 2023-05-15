@@ -11,10 +11,9 @@ const roboto = Roboto({ weight: '100', subsets: ['latin'] })
 
 import { pets } from '../assets/resultsMock';
 
-// server-side function getStaticProps fetches data from the API URL and returns an object
+// SSG: function getStaticProps fetches data from the API URL and returns an object
 export const getStaticProps = async (context) => {
- 
-  return { 
+   return { 
       props:  {
         pets
       }
@@ -22,6 +21,7 @@ export const getStaticProps = async (context) => {
 }
 
 export default function Home(props) {
+  // Get Static Data as Props into the Component
   console.log('props',  props)
 
   const handleOnBannerBtnClick = () => {
