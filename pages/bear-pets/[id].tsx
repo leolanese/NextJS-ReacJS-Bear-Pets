@@ -39,7 +39,7 @@ const BearPets = () => {
                     />
                 </div>
                 <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">Bear-Pets Located: {id}</div>
+                    <div className="font-bold text-xl mb-2">Your Bear Pet: {id}</div>
                         <ul>
                             {Object.keys(router.query).map((param, index) => (
                             <li key={index}>

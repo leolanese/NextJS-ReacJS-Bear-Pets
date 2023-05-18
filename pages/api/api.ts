@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { users } from './../../assets/resultsMock';
+import { pets } from './../../assets/resultsMock';
 
 export default async function handler(req, res) {
   
   if (req.method === 'GET') {
     // Handle GET request
-    const data = users;
+    const data = pets;
     res.status(200).json(data);
 
   } else {

@@ -1,18 +1,19 @@
 import React, {memo} from 'react';
 import Card from './Card';
 
-function CardList({users}) {
+function CardList({pets}) {
 
-    const cardComponent = users.map((user, i) => {
-      console.log(user);
+    const cardComponent = pets.map((user, i) => {
       return (
         <div className={`m-4 b-1`} key={i}>
+
             <Card key={i} 
-                id={ users[i].id } 
-                name={users[i].name} 
-                href={`bear-pets/`}
-                imgUrl={users[i].img+users[i].id}
+                id={ pets[i].id } 
+                name={pets[i].name} 
+                href={`bear-pets`}
+                imgUrl={pets[i].img+pets[i].id}
             />
+
         </div>
       )
     })
