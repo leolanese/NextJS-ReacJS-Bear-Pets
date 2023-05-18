@@ -19,11 +19,11 @@ const nextConfig = {
   },
   // Setting up Internationalized Routing
   i18n: {
-    locales: ['en-EN', 'fr', 'nl-NL'],
+    locales: ['en-EN', 'es', 'nl-NL'],
     defaultLocale: 'en-EN',
   },
   // Adding Custom Headers, Rewrites, or Redirects:
-  // The /:path* pattern matches all route
+  // The `/:path*` pattern matches all route
   async headers() {
     return [
       {
