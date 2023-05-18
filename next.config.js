@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['placebear.com'],
   },
+  target: 'serverless',
 }
 
 
