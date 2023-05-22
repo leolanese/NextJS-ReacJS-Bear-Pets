@@ -19,7 +19,12 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return (
       <div className={state.theme}>
-        <button onClick={handleThemeToggle}>Toggle Theme</button>
+        <button 
+          className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full`}
+          onClick={handleThemeToggle}>
+          Toggle Theme
+        </button>
+        
         <Component {...props} />
       </div>
     )
