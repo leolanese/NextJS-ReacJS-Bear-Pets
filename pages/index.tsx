@@ -15,6 +15,7 @@ const inter = Inter({ weight: '500', subsets: ['latin'] })
 const roboto = Roboto({ weight: '100', subsets: ['latin'] })
 
 import { pets } from '../assets/resultsMock';
+import { ThemeProvider, useTheme } from './../components/ThemeContext'
 
 // SSG: function getStaticProps fetches data from the API URL and returns an object
 export const getStaticProps = async (context) => {
@@ -38,6 +39,9 @@ export default function Home(props) {
     pets: [], // resultsMock
     searchField: '',
   })
+
+    const { state } = useTheme();
+
 
   useEffect(() => {
     const fetchPets = async (signal) => {
@@ -83,6 +87,10 @@ export default function Home(props) {
     pet.name.toLowerCase().includes(appState.searchField.toLowerCase())
   );
 
+  const { dispatch } = useTheme();
+  const handleThemeToggle = () => dispatch({ type: 'TOGGLE_THEME' });
+
+
   return (
     <>
       <main className={` inter.className pt-8`}>
@@ -101,6 +109,12 @@ export default function Home(props) {
           className={`flex flex-col items-center justify-between`} >
             <Banner buttonText="ClickMe" handleOnClick={handleOnBannerBtnClick} />
         </div>
+
+        <button 
+          className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full`}
+          onClick={handleThemeToggle}>
+          Toggle Theme
+        </button>
 
         {/* SSG */}
         {/* <CardList pets={props.pets} /> */}

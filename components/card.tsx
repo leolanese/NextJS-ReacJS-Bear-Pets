@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "./Card.module.css";
-
 import React, { useReducer, useState, useEffect } from 'react'
 import { useTheme } from './ThemeContext'
 
@@ -14,7 +12,7 @@ export default function Card(props) {
     <>
         <Link href={{ pathname: `${props.href}/${id}`, query: { id, name, href, imgUrl } }}>
     
-          <div className={ `flex space-x-4 ${state.theme}` }>
+          <div className={ `flex space-x-4 rounded-md  border-indigo-900 ${state.theme}` }>
             <div className="w-36 h-36 rounded overflow-hidden shadow-lg">
 
               <Image

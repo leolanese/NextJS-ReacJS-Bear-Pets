@@ -13,18 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const WrappedComponent = (props) => {
     const { state, dispatch } = useTheme();
-    console.log('theme', state.theme); 
-
     const handleThemeToggle = () => dispatch({ type: 'TOGGLE_THEME' });
 
     return (
       <div className={state.theme}>
-        <button 
-          className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full`}
-          onClick={handleThemeToggle}>
-          Toggle Theme
-        </button>
-        
         <Component {...props} />
       </div>
     )
