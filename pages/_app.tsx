@@ -1,22 +1,27 @@
-import React, { useState, useEffect, memo } from 'react'
+import React, { useState, useEffect, memo, useContext } from 'react'
 
 import type { AppProps } from 'next/app'
 import Image from 'next/image'
 
+import ThemeContextComponent from '../components/ThemeContextProvider';
+
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
+
   console.log('process.env.LOCAL', process.env.LOCAL);  // http://localhost
   console.log('process.env.PORT', process.env.PORT);   // 3000
-  
+
+  const theme = useContext(ThemeContextComponent)
+ 
   return (
     <>
       <div className={`bg-sky-500/75`}>
 
-        <Component {...pageProps} />
+        <Component {...pageProps} value={theme} />
         
         <footer 
-            className={`flex flex justify-between h-full p-2`}>
+            className={`flex flex justify-between h-full p-2 ${theme}`}>
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
                 src="/vercel.svg"

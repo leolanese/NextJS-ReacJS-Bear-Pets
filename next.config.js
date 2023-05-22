@@ -5,18 +5,6 @@ const nextConfig = {
   images: {
     domains: ['placebear.com'],
   },
-  // Every page in the pages directory becomes a serverless function (lambda)
-  target: 'serverless',
-  env: {
-    LOCAL: process.env.LOCAL,
-    PORT: process.env.PORT,
-  },
-  // Custom Serverless Function Configuration
-  serverlessFunctionInputs: (inputs, nextConfig, serverlessConfig) => {
-    // Do something
-    console.log('serverlessFunctionInputs', inputs, nextConfig, serverlessConfig)
-    return inputs;  // Make sure to return inputs
-  },
   // Setting up Internationalized Routing
   i18n: {
     locales: ['en-EN', 'es', 'nl-NL'],

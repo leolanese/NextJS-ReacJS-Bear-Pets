@@ -1,10 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useContext } from 'react'
+
+import ThemeContextComponent from './ThemeContextProvider';
 
 import styles from "./Card.module.css";
 
 const Card = (props) => {
   const { id, name, href, imgUrl } = props;
+  
+  const theme = useContext(ThemeContextComponent)
+  console.log('ThemeContextComponent: ', ThemeContextComponent)
 
   return (
     <>
@@ -21,7 +27,7 @@ const Card = (props) => {
                 alt={props.name}
               />
 
-              <div className="px-2 py-1">
+              <div className={`px-2 py-1 ${theme}`}>
                 <div className="font-bold text-sm mb-1 truncate">Name: {props.name}</div>
                 <p className="text-gray-700 text-xs truncate">id: {props.id}</p>
               </div>
@@ -36,3 +42,7 @@ const Card = (props) => {
 };
 
 export default Card;
+function ThemeContext(ThemeContext: any) {
+  throw new Error("Function not implemented.");
+}
+
