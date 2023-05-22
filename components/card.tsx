@@ -31,6 +31,7 @@ function Card(props) {
                 <div className="font-bold text-sm mb-1 truncate">Name: {props.name}</div>
                 <p className="text-gray-700 text-xs truncate">id: {props.id}</p>
               </div>
+              
 
             </div>
           </div>  
