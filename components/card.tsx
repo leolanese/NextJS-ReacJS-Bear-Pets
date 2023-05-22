@@ -6,15 +6,11 @@ import ThemeContextComponent from './ThemeContextProvider';
 
 import styles from "./Card.module.css";
 
-const Card = (props) => {
+function Card(props) {
   const { id, name, href, imgUrl } = props;
   
   const theme = useContext(ThemeContextComponent)
   console.log('ThemeContextComponent: ', ThemeContextComponent)
-
-  const btnClick = () => {
-    console.log('btnClick: `Card`')
-  };
 
   return (
     <>
@@ -46,7 +42,3 @@ const Card = (props) => {
 };
 
 export default Card;
-function ThemeContext(ThemeContext: any) {
-  throw new Error("Function not implemented.");
-}
-

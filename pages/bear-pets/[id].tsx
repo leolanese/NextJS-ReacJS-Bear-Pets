@@ -63,7 +63,3 @@ const BearPets = () => {
 };
 
 export default BearPets;
-
-function otherParams(otherParams: any) {
-    throw new Error('Function not implemented.');
-}

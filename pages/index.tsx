@@ -27,8 +27,7 @@ export const getStaticProps = async (context) => {
 }
 
 export default function Home(props) {
-  
-  // Get Static Data as Props into the Component
+    // Get Static Data as Props into the Component
   console.log('props',  props)
 
   const router = useRouter();

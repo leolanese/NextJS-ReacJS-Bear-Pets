@@ -2,7 +2,6 @@ import React, {memo} from 'react';
 import Card from './Card';
 
 function CardList({pets}) {
-
     const cardComponent = pets.map((user, i) => {
       return (
         <div className={`m-4 b-1`} key={i}>

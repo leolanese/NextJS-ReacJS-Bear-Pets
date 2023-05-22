@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo, useContext, useReducer } from 'react'
+import React, { useState, useEffect, useContext, useReducer } from 'react'
 import type { AppProps } from 'next/app'
 import Image from 'next/image'
 import ThemeContextComponent from '../components/ThemeContextProvider';
@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <div className={`bg-sky-500/75`}>
 
-        <Component {...pageProps} value={state} />
+        <Component {...pageProps} />
         
         <footer 
             className={`flex flex justify-between h-full p-2 ${state}`}>
