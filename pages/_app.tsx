@@ -4,12 +4,12 @@ import Image from 'next/image'
 import '@/styles/globals.css'
 import { ThemeProvider, useTheme } from './../components/ThemeContext'
 
-const initialState = { theme: 'bg-gray-500' };
+// const initialState = { theme: 'bg-gray-500' };
 
 export default function App({ Component, pageProps }: AppProps) {
   console.log('process.env.LOCAL', process.env.LOCAL);  // http://localhost
   console.log('process.env.PORT', process.env.PORT);   // 3000
-  const { state } = useTheme();
+  // const { state } = useTheme();
 
   const WrappedComponent = (props) => {
     const { state, dispatch } = useTheme();
@@ -17,18 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return (
       <div className={state.theme}>
+         <button onClick={handleThemeToggle}>Toggle Theme (from _app_)</button>
         <Component {...props} />
-      </div>
-    )
-  }
-
-  return (
-    <>
-      <div className={` ${state.theme} `}>
-
-      <ThemeProvider>
-        <WrappedComponent {...pageProps} />
-      </ThemeProvider>
 
         <footer 
             className={`flex flex justify-between h-full p-2`}>
@@ -56,7 +46,13 @@ export default function App({ Component, pageProps }: AppProps) {
         </footer>
 
       </div>
-    </>
+    )
+  }
+
+  return (
+      <ThemeProvider>
+        <WrappedComponent {...pageProps} />
+      </ThemeProvider>
   );
 }
 
