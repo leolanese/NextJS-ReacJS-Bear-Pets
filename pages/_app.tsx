@@ -1,44 +1,40 @@
-import React, { useState, useEffect, useContext, useReducer } from 'react'
+import React, { useReducer } from 'react'
 import type { AppProps } from 'next/app'
 import Image from 'next/image'
-import ThemeContextComponent from '../components/ThemeContextProvider';
 import '@/styles/globals.css'
+import { ThemeProvider, useTheme } from './../components/ThemeContext'
 
-const initialState = { theme: 'light' };
-
-function reducer(state, action) {
-  switch (action.type) {
-    case 'TOGGLE_THEME':
-      return { theme: state.theme === 'light' ? 'dark' : 'light' };
-    default:
-      throw new Error();
-  }
-}
+const initialState = { theme: 'bg-gray-500' };
 
 export default function App({ Component, pageProps }: AppProps) {
   console.log('process.env.LOCAL', process.env.LOCAL);  // http://localhost
   console.log('process.env.PORT', process.env.PORT);   // 3000
+  const { state } = useTheme();
 
-  const theme = useContext(ThemeContextComponent)
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const WrappedComponent = (props) => {
+    const { state, dispatch } = useTheme();
+    console.log('theme', state.theme); 
 
-  // Determine the background color based on the theme state
-  const bgColor = state.theme === 'light' ? 'bg-white' : 'bg-black';
+    const handleThemeToggle = () => dispatch({ type: 'TOGGLE_THEME' });
+
+    return (
+      <div className={state.theme}>
+        <button onClick={handleThemeToggle}>Toggle Theme</button>
+        <Component {...props} />
+      </div>
+    )
+  }
 
   return (
     <>
-      <div className={`bg-sky-500/75 ${bgColor}`}>
+      <div className={` ${state.theme} `}>
 
-      <button onClick={() => dispatch({ type: 'TOGGLE_THEME' })}>
-        Toggle Theme
-      </button>
+      <ThemeProvider>
+        <WrappedComponent {...pageProps} />
+      </ThemeProvider>
 
-        {/* Component is the actual page that is going to be rendered, based on the route. */}
-        <Component {...pageProps} theme={bgColor} />
-
-       
         <footer 
-            className={`flex flex justify-between h-full p-2 ${bgColor}`}>
+            className={`flex flex justify-between h-full p-2`}>
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
                 src="/vercel.svg"
@@ -48,8 +44,8 @@ export default function App({ Component, pageProps }: AppProps) {
                 quality={80}
                 loading='lazy'
                 sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
+                       (min-width: 28em) 45vw,
+                       100vw"
               />
 
               <Image
