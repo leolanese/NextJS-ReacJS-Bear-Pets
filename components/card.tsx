@@ -23,7 +23,7 @@ export default function Card(props) {
                 alt={props.name}
               />
 
-              <div className={`px-2 py-1 ${state.theme}`}>
+              <div className={`px-2 py-1 transition ease-in duration-700 ${state.theme}`}>
                 <div className={`font-bold text-sm mb-1 truncate ${state.color}`}>Name: {props.name}</div>
                 <p className={`text-gray-700 text-xs truncate ${state.color}`}>id: {props.id}</p>
               </div>

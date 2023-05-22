@@ -38,7 +38,7 @@ const BearPets = () => {
                                 100vw"
                     />
                 </div>
-                <div className="px-6 py-4">
+                <div className="px-6 py-4 shadow-sm">
                     <div className="font-bold text-xl mb-2">Your Bear Pet: {id}</div>
                         <ul>
                             {Object.keys(router.query).map((param, index) => (
