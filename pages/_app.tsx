@@ -1,27 +1,36 @@
-import React, { useState, useEffect, memo, useContext } from 'react'
-
+import React, { useState, useEffect, memo, useContext, useReducer } from 'react'
 import type { AppProps } from 'next/app'
 import Image from 'next/image'
-
 import ThemeContextComponent from '../components/ThemeContextProvider';
-
 import '@/styles/globals.css'
 
-export default function App({ Component, pageProps }: AppProps) {
+const initialState = { theme: 'light' };
 
+function reducer(state, action) {
+  switch (action.type) {
+    case 'TOGGLE_THEME':
+      return { theme: state.theme === 'light' ? 'dark' : 'light' };
+    default:
+      throw new Error();
+  }
+}
+
+export default function App({ Component, pageProps }: AppProps) {
   console.log('process.env.LOCAL', process.env.LOCAL);  // http://localhost
   console.log('process.env.PORT', process.env.PORT);   // 3000
 
   const theme = useContext(ThemeContextComponent)
- 
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <>
       <div className={`bg-sky-500/75`}>
 
-        <Component {...pageProps} value={theme} />
+        <Component {...pageProps} value={state} />
         
         <footer 
-            className={`flex flex justify-between h-full p-2 ${theme}`}>
+            className={`flex flex justify-between h-full p-2 ${state}`}>
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
                 src="/vercel.svg"

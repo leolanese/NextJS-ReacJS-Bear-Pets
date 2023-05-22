@@ -12,6 +12,10 @@ const Card = (props) => {
   const theme = useContext(ThemeContextComponent)
   console.log('ThemeContextComponent: ', ThemeContextComponent)
 
+  const btnClick = () => {
+    console.log('btnClick: `Card`')
+  };
+
   return (
     <>
         <Link href={{ pathname: `${props.href}/${id}`, query: { id, name, href, imgUrl } }}>
